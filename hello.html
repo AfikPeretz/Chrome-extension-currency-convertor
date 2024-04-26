@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      font-size: 16px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"], input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 82%;
+      margin-bottom: 20px;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 20px;
+      appearance: none;
+      background: url('data:image/svg+xml;utf8,<svg fill="#999" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+      background-size: 20px;
+    }
+    #convertBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #convertBtn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1><i class="fas fa-money-bill-wave"></i> Currency Converter</h1>
+  <label for="currencyType">Choose Currency:</label><br>
+  <select id="currencyType">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+  </select><br>
+  <label for="amount">Amount:</label><br>
+  <input type="number" id="amount" name="amount"><br>
+  <label for="convertedAmount">Converted Amount (ILS):</label><br>
+  <input type="text" id="convertedAmount" readonly><br>
+  <script src="popup.js"></script>
+</body>
+</html>
